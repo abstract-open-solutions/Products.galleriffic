@@ -2,7 +2,11 @@ from Products.Five import BrowserView
 from Products.CMFPlone.utils import getToolByName     
 from zope.interface import Interface, alsoProvides     
 from zope import schema          
-from Products.Five.formlib import formbase    
+try:
+    from Products.Five.formlib import formbase    
+except:
+    from five.formlib import formbase  
+
 from zope.formlib import form          
 
 from Products.galleriffic import PLONE3, PLONE4
